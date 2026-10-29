@@ -1,0 +1,5 @@
+FC_ID,FC_Name,Practical_Daily_Capacity,Current_Daily_Orders,Avg_Processing_Time_Hours,SLA_Hours
+FC01,Mumbai,24000,19500,4.7,6.0
+FC02,Delhi-NCR,22000,18000,4.2,6.0
+FC03,Bengaluru,20000,15800,3.9,6.0
+FC04,Kolkata,16000,12200,4.5,6.0

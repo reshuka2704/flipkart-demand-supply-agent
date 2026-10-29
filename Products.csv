@@ -1,0 +1,61 @@
+SKU_ID,Product_Name,Category,Supplier_ID,Unit_Cost,Selling_Price,Demand_Profile
+SKU0001,Wireless Earbuds 001,Electronics,SUP10,2502.69,2808.8,Variable
+SKU0002,Vitamin C Serum 002,Beauty,SUP08,4936.12,6463.9,Stable
+SKU0003,Air Fryer 003,Home & Kitchen,SUP01,1731.92,1941.64,Stable
+SKU0004,Sneakers 004,Fashion,SUP12,2094.75,2866.49,Seasonal
+SKU0005,Notebook Set 005,General Merchandise,SUP08,8127.16,10915.85,Stable
+SKU0006,Smartwatch 006,Electronics,SUP02,5164.74,6880.99,Stable
+SKU0007,Face Wash 007,Beauty,SUP06,6873.79,8691.19,Seasonal
+SKU0008,Mixer Grinder 008,Home & Kitchen,SUP03,1122.22,1377.99,Stable
+SKU0009,Casual Shirt 009,Fashion,SUP08,8291.44,10839.73,Stable
+SKU0010,Desk Lamp 010,General Merchandise,SUP04,1992.91,2316.88,Stable
+SKU0011,Bluetooth Speaker 011,Electronics,SUP06,6500.7,8613.59,Stable
+SKU0012,Moisturizer 012,Beauty,SUP09,5083.58,5876.31,Variable
+SKU0013,Storage Box 013,Home & Kitchen,SUP10,4443.87,6025.1,Stable
+SKU0014,Denim Jeans 014,Fashion,SUP03,8652.23,10720.15,Seasonal
+SKU0015,Travel Organizer 015,General Merchandise,SUP02,6785.63,8460.99,Stable
+SKU0016,Power Bank 016,Electronics,SUP01,2084.14,2808.96,Stable
+SKU0017,Sunscreen 017,Beauty,SUP08,6179.49,7787.11,Stable
+SKU0018,Dinner Set 018,Home & Kitchen,SUP08,5978.71,7489.64,Seasonal
+SKU0019,Backpack 019,Fashion,SUP09,1481.91,1662.87,Stable
+SKU0020,Extension Board 020,General Merchandise,SUP11,7424.54,10064.92,Stable
+SKU0021,Phone Charger 021,Electronics,SUP05,4244.8,5185.2,Variable
+SKU0022,Shampoo 022,Beauty,SUP11,1159.06,1311.62,Seasonal
+SKU0023,Water Bottle 023,Home & Kitchen,SUP09,5591.4,6568.91,Stable
+SKU0024,Women’s Top 024,Fashion,SUP04,6947.38,8351.83,Stable
+SKU0025,Cleaning Kit 025,General Merchandise,SUP03,7618.13,10021.6,Variable
+SKU0026,Laptop Stand 026,Electronics,SUP05,2535.7,3280.62,Seasonal
+SKU0027,Hair Serum 027,Beauty,SUP10,8209.22,9932.77,Variable
+SKU0028,Bedsheet Set 028,Home & Kitchen,SUP02,5577.46,7181.81,Stable
+SKU0029,Cotton T-Shirt 029,Fashion,SUP06,882.48,1035.52,Variable
+SKU0030,Toy Set 030,General Merchandise,SUP01,8437.28,9870.15,Stable
+SKU0031,USB Hub 031,Electronics,SUP12,5190.23,6019.51,Variable
+SKU0032,Lip Balm 032,Beauty,SUP10,3100.6,3807.4,Stable
+SKU0033,Non-Stick Pan 033,Home & Kitchen,SUP02,5721.96,7603.57,Variable
+SKU0034,Running Shoes 034,Fashion,SUP12,6660.68,8272.39,Stable
+SKU0035,Umbrella 035,General Merchandise,SUP03,7641.57,10264.96,Stable
+SKU0036,Smart LED Bulb 036,Electronics,SUP07,2330.08,2722.0,Variable
+SKU0037,Body Lotion 037,Beauty,SUP06,1846.4,2274.45,Stable
+SKU0038,Vacuum Cleaner 038,Home & Kitchen,SUP03,346.55,399.2,Seasonal
+SKU0039,Wallet 039,Fashion,SUP04,7962.18,9897.96,Stable
+SKU0040,Cushion Cover 040,General Merchandise,SUP07,1579.15,1941.89,Seasonal
+SKU0041,Wireless Mouse 041,Electronics,SUP08,4919.73,5844.88,Seasonal
+SKU0042,Face Mask 042,Beauty,SUP03,2050.54,2458.85,Stable
+SKU0043,Lunch Box 043,Home & Kitchen,SUP02,7624.11,10148.98,Variable
+SKU0044,Sunglasses 044,Fashion,SUP01,4587.47,6315.59,Stable
+SKU0045,Grocery Organizer 045,General Merchandise,SUP03,4121.27,4935.69,Seasonal
+SKU0046,Keyboard 046,Electronics,SUP05,3195.5,3985.22,Stable
+SKU0047,Perfume 047,Beauty,SUP01,6857.62,8747.19,Seasonal
+SKU0048,Kitchen Scale 048,Home & Kitchen,SUP06,5761.63,6476.82,Variable
+SKU0049,Track Pants 049,Fashion,SUP10,7213.94,8507.8,Seasonal
+SKU0050,Phone Tripod 050,General Merchandise,SUP06,8065.7,10684.93,Variable
+SKU0051,Wireless Earbuds 051,Electronics,SUP06,7163.54,8366.82,Variable
+SKU0052,Vitamin C Serum 052,Beauty,SUP01,7351.32,9599.58,Seasonal
+SKU0053,Air Fryer 053,Home & Kitchen,SUP07,3132.23,4033.72,Stable
+SKU0054,Sneakers 054,Fashion,SUP01,3116.72,3597.45,Variable
+SKU0055,Notebook Set 055,General Merchandise,SUP11,4675.03,6413.25,Stable
+SKU0056,Smartwatch 056,Electronics,SUP01,5898.49,7162.13,Variable
+SKU0057,Face Wash 057,Beauty,SUP09,7884.89,10261.91,Variable
+SKU0058,Mixer Grinder 058,Home & Kitchen,SUP02,1126.76,1487.14,Variable
+SKU0059,Casual Shirt 059,Fashion,SUP08,7069.86,9533.75,Stable
+SKU0060,Desk Lamp 060,General Merchandise,SUP01,7720.62,9769.9,Variable

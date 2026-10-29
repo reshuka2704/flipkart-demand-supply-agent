@@ -1,0 +1,41 @@
+Sheet,Column,Meaning
+Products,SKU_ID,Unique product identifier
+Products,Product_Name,Synthetic product name
+Products,Category,Product category
+Products,Supplier_ID,Primary supplier
+Products,Unit_Cost,Synthetic procurement cost per unit
+Products,Selling_Price,Synthetic customer price
+Products,Demand_Profile,Stable/seasonal/variable demand profile
+Historical_Orders,Date,Order date
+Historical_Orders,FC_ID,Fulfilment centre handling demand
+Historical_Orders,SKU_ID,Product identifier
+Historical_Orders,Orders,Daily order volume
+Historical_Orders,Delivery_Type,Synthetic promised delivery-speed category
+Current_Inventory,FC_ID,Fulfilment centre
+Current_Inventory,SKU_ID,Product
+Current_Inventory,Available_Stock,Units available for allocation
+Current_Inventory,Reserved_Stock,Units reserved
+Suppliers,Supplier_ID,Supplier identifier
+Suppliers,Supplier_Name,Synthetic supplier name
+Suppliers,Lead_Time_Days,Expected replenishment lead time
+Suppliers,Capacity_Per_Day,Synthetic daily supply capacity
+Suppliers,OTIF_Percentage,Synthetic supplier reliability reference
+Purchase_Orders,PO_ID,Purchase order identifier
+Purchase_Orders,Order_Date,PO creation date
+Purchase_Orders,FC_ID,Receiving fulfilment centre
+Purchase_Orders,Supplier_ID,Supplier
+Purchase_Orders,SKU_ID,Product
+Purchase_Orders,Ordered_Qty,Quantity ordered
+Purchase_Orders,Expected_Delivery_Date,Promised arrival date
+Purchase_Orders,Actual_Delivery_Date,Simulated actual arrival date
+Purchase_Orders,Received_Qty,Quantity received
+Fulfilment_Capacity,FC_ID,Fulfilment centre identifier
+Fulfilment_Capacity,FC_Name,Synthetic location
+Fulfilment_Capacity,Practical_Daily_Capacity,Practical daily order-processing capacity
+Fulfilment_Capacity,Current_Daily_Orders,Baseline daily orders
+Fulfilment_Capacity,Avg_Processing_Time_Hours,Average processing time
+Fulfilment_Capacity,SLA_Hours,Synthetic internal SLA threshold
+Campaign_Scenarios,Event_ID,Demand-generating event
+Campaign_Scenarios,Category,Affected category
+Campaign_Scenarios,Expected_Demand_Uplift_Pct,Expected demand uplift
+Campaign_Scenarios,Campaign_Intensity,Relative promotional intensity
