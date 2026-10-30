@@ -483,7 +483,7 @@ with st.expander("How this prototype calculates risk"):
     st.markdown(
         """
         - **Scenario demand:** baseline daily demand * (1 + demand uplift).
-        - **Inventory cover:** available stock ÷ scenario daily demand.
+        - **Inventory cover:** available stock / scenario daily demand.
         - **Inventory gap:** max(lead-time demand − available stock, 0).
         - **Supplier utilisation:** scenario supplier demand ÷ supplier daily capacity.
         - **Fulfilment utilisation:** scenario daily orders ÷ practical daily capacity.
