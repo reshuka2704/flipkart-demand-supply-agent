@@ -487,7 +487,7 @@ with st.expander("How this prototype calculates risk"):
         """
         - **Scenario demand:** baseline daily demand * (1 + demand uplift).
         - **Inventory cover:** available stock / scenario daily demand.
-        - **Inventory gap:** max(lead-time demand − available stock, 0).
+        - **Inventory gap:** Maximum of lead-time demand minus available stock, or zero.
         - **Supplier utilisation:** scenario supplier demand ÷ supplier daily capacity.
         - **Fulfilment utilisation:** scenario daily orders ÷ practical daily capacity.
         - **Risk thresholds:** inventory high if stock cover is below lead time; FC high above 100% utilisation; supplier high when scenario demand exceeds capacity. These are demonstration rules and should be calibrated with real business owners before operational use.
