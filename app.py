@@ -259,22 +259,69 @@ def get_saved_model() -> str:
         pass
     return os.getenv("GEMINI_MODEL", DEFAULT_MODEL).strip() or DEFAULT_MODEL
 
-
 def ask_gemini(question: str, history: list[dict[str, str]], uplift_percent: int, api_key: str, model: str) -> str:
     """Call Gemini and allow it to invoke the Python scenario-analysis function."""
+
     client = genai.Client(api_key=api_key)
+
     history_text = "\n".join(
-        f"{m['role'].upper()}: {m['content']}" for m in history[-8:]
+        f"{m['role'].upper()}: {m['content']}"
+        for m in history[-8:]
     )
-    prompt = f"""Current dashboard demand uplift: {uplift_percent}%.
-Previous conversation (may be empty):
+
+    prompt = f"""
+You are an expert supply chain consultant advising
+an e-commerce operations management team.
+
+This is a Flipkart-inspired project using synthetic data,
+not actual Flipkart internal data.
+
+Current dashboard demand uplift: {uplift_percent}%.
+
+Previous conversation:
 {history_text}
 
-User's latest question: {question}
+User's latest question:
+{question}
 
- # Get the actual calculations from Python first current_scenario = analyze_supply_chain(uplift_percent)  scenario_snapshot = json.dumps(     current_scenario,     indent=2,     default=str )  prompt = f""" You are an expert supply chain consultant advising an e-commerce operations management team.  The project is a Flipkart-inspired prototype using synthetic data, not actual Flipkart internal data.  CURRENT DEMAND UPLIFT: {uplift_percent}%  PYTHON-CALCULATED SCENARIO RESULTS: {scenario_snapshot}  USER QUESTION: {question}  INSTRUCTIONS:  1. Use the Python-calculated results as the source of truth. 2. If the user asks about a different demand uplift,    call the analyze_supply_chain Python tool for that uplift. 3. Never invent numerical results. 4. Do not give only a one-sentence response. 5. Explain what the results mean for business operations. 6. Give specific and practical recommendations. 7. Distinguish calculated results from assumptions.  RESPONSE FORMAT:  ## 1. Overall Assessment Explain the supply chain readiness and why it has received that risk status.  ## 2. Key Findings Discuss: - Inventory shortages and stock coverage. - Supplier capacity and supplier risks. - Fulfilment centre capacity and utilisation. Use actual figures from the Python results.  ## 3. Critical Bottlenecks Identify the most important problems. Explain their possible operational impact.  ## 4. Management Recommendations Give at least 4 specific, prioritised actions. Explain how each action can help. Consider inventory redistribution, safety stock, supplier coordination, replenishment and FC capacity.  ## 5. Expected Business Impact Explain how these actions can improve fulfilment, order processing, customer experience and SLA performance.  Keep management answers approximately 180-250 words. Use clear headings, bullet points and relevant numbers. Avoid generic recommendations. Do not imply that this is real Flipkart operational data. """ using a synthetic, Flipkart-inspired prototype dataset.
-Use the Python analyze_supply_chain tool whenever numerical scenario results, bottlenecks, or a different uplift are required. Do not invent numbers. If the user names a different uplift, use that uplift in the tool call. Clearly distinguish calculated results from assumptions, explain the most important risk first, and recommend practical actions such as inventory rebalancing, replenishment prioritisation, supplier follow-up, or workload shifting only where supported by the results.
-Never imply this is real Flipkart internal data. Keep the answer clear and interview-friendly.
+INSTRUCTIONS:
+
+1. Use the Python analyze_supply_chain tool for numerical
+   scenario analysis and bottleneck identification.
+2. If the user mentions a different demand uplift,
+   analyse that specific scenario using the Python tool.
+3. Never invent numerical results.
+4. Explain inventory shortages, supplier capacity and
+   fulfilment centre utilisation wherever relevant.
+5. Identify the most important operational bottlenecks.
+6. Give practical and prioritised management recommendations.
+7. Explain the business impact of the recommendations.
+8. Distinguish calculated results from project assumptions.
+
+RESPONSE FORMAT:
+
+## 1. Overall Assessment
+Explain the overall supply chain readiness.
+
+## 2. Key Findings
+Discuss inventory, suppliers and fulfilment centres.
+Use actual figures returned by Python.
+
+## 3. Critical Bottlenecks
+Explain the major operational problems and their impact.
+
+## 4. Management Recommendations
+Provide at least four practical and prioritised actions.
+
+## 5. Expected Business Impact
+Explain the expected impact on fulfilment,
+processing time, customer experience and service levels.
+
+Keep the answer detailed, approximately 180-250 words.
+Use clear headings and bullet points.
+Never present synthetic data as actual Flipkart data.
+"""
+
     response = client.models.generate_content(
         model=model,
         contents=prompt,
@@ -284,10 +331,17 @@ Never imply this is real Flipkart internal data. Keep the answer clear and inter
             max_output_tokens=1800,
         ),
     )
+
     answer = getattr(response, "text", None)
+
     if not answer:
-        raise RuntimeError("Gemini returned an empty response. Check the model name and API access.")
+        raise RuntimeError(
+            "Gemini returned an empty response. "
+            "Check the model name and API access."
+        )
+
     return answer.strip()
+
 
 
 # ----------------------------- UI -------------------------------------------
