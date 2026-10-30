@@ -1,0 +1,13 @@
+Supplier_ID,Supplier_Name,Lead_Time_Days,Capacity_Per_Day,OTIF_Percentage
+SUP01,Supplier A,7,10914,90.1
+SUP02,Supplier B,5,6748,89.5
+SUP03,Supplier C,5,8462,89.6
+SUP04,Supplier D,8,3863,92.4
+SUP05,Supplier E,10,3906,94.1
+SUP06,Supplier F,7,7895,92.2
+SUP07,Supplier G,7,2801,89.5
+SUP08,Supplier H,8,8372,89.7
+SUP09,Supplier I,5,4837,92.2
+SUP10,Supplier J,8,6072,91.8
+SUP11,Supplier K,5,3466,86.6
+SUP12,Supplier L,8,4299,93.2

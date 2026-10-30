@@ -1,0 +1,6 @@
+Event_ID,Category,Expected_Demand_Uplift_Pct,Campaign_Intensity
+BBD_Style_Sale,Electronics,35,High
+BBD_Style_Sale,Beauty,25,Medium
+BBD_Style_Sale,Home & Kitchen,20,Medium
+BBD_Style_Sale,Fashion,30,High
+BBD_Style_Sale,General Merchandise,15,Medium
