@@ -461,7 +461,25 @@ with chat_tab:
         st.session_state.chat_messages = []
         st.rerun()
 
+
 with st.expander("How this prototype calculates risk"):
+    st.markdown(
+        """
+        - **Scenario demand:** baseline daily demand * (1 + demand uplift).
+        - **Inventory cover:** available stock / scenario daily demand.
+        - **Inventory gap:** max(lead-time demand - available stock, 0).
+        - **Supplier utilisation:** scenario supplier demand / supplier daily capacity.
+        - **Fulfilment utilisation:** scenario daily orders / practical daily capacity.
+        - **Risk thresholds:** Inventory risk is high when stock cover is below lead time. FC risk is high above 100% utilisation. Supplier risk is high when scenario demand exceeds capacity.
+
+        These are demonstration assumptions and should be calibrated before operational use.
+        """
+    )
+    st.write(
+        "Source: Corrected synthetic dataset. "
+        "Not actual Flipkart operational data."
+    )
+
     st.markdown(
         """
         - **Scenario demand:** baseline daily demand × (1 + demand uplift).
