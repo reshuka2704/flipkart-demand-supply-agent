@@ -461,7 +461,6 @@ with chat_tab:
         st.session_state.chat_messages = []
         st.rerun()
 
-with st.expander("
 with st.expander("How this prototype calculates risk"):
     st.markdown(
         """
@@ -478,19 +477,4 @@ with st.expander("How this prototype calculates risk"):
         "not official Flipkart operating rules."
     )
    
-    st.write(
-        "Source: Corrected synthetic dataset. "
-        "Not actual Flipkart operational data."
-    )
-
-    st.markdown(
-        """
-        - **Scenario demand:** baseline daily demand * (1 + demand uplift).
-        - **Inventory cover:** available stock / scenario daily demand.
-        - **Inventory gap:** Maximum of lead-time demand minus available stock, or zero.
-        - **Supplier utilisation:** scenario supplier demand ÷ supplier daily capacity.
-        - **Fulfilment utilisation:** scenario daily orders ÷ practical daily capacity.
-        - **Risk thresholds:** inventory high if stock cover is below lead time; FC high above 100% utilisation; supplier high when scenario demand exceeds capacity. These are demonstration rules and should be calibrated with real business owners before operational use.
-        """
-    )
     st.write("Source workbook: data/flipkart_demand_to_supply_impact_dataset_corrected.xlsx. The app reads the corrected workbook sheets directly. All records are synthetic.")
