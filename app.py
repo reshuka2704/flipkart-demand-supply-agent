@@ -461,27 +461,23 @@ with chat_tab:
         st.session_state.chat_messages = []
         st.rerun()
 
+with st.expander("
 with st.expander("How this prototype calculates risk"):
-    st.markdown("- **Scenario demand:** Baseline daily demand multiplied by (1 + demand uplift).")
-    st.markdown("- **Inventory cover:** Available stock divided by scenario daily demand.")
-    st.markdown("- **Inventory gap:** Maximum of lead-time demand minus available stock, or zero.")
-    st.markdown("- **Supplier utilisation:** Scenario supplier demand divided by supplier daily capacity.")
-    st.markdown("- **Fulfilment utilisation:** Scenario daily orders divided by practical daily capacity.")
-    st.markdown("- **Risk thresholds:** High fulfilment risk above 100% utilisation. Supplier risk is high when demand exceeds capacity.")
-    st.caption("All thresholds are prototype assumptions based on synthetic data, not official Flipkart operating rules.")
-"):
     st.markdown(
         """
-        - **Scenario demand:** baseline daily demand * (1 + demand uplift).
-        - **Inventory cover:** available stock / scenario daily demand.
-        - **Inventory gap:** max(lead-time demand - available stock, 0).
-        - **Supplier utilisation:** scenario supplier demand / supplier daily capacity.
-        - **Fulfilment utilisation:** scenario daily orders / practical daily capacity.
-        - **Risk thresholds:** Inventory risk is high when stock cover is below lead time. FC risk is high above 100% utilisation. Supplier risk is high when scenario demand exceeds capacity.
-
-        These are demonstration assumptions and should be calibrated before operational use.
+        - **Scenario demand:** Baseline daily demand multiplied by (1 + demand uplift).
+        - **Inventory cover:** Available stock divided by scenario daily demand.
+        - **Inventory gap:** Maximum of lead-time demand minus available stock, or zero.
+        - **Supplier utilisation:** Scenario supplier demand divided by supplier daily capacity.
+        - **Fulfilment utilisation:** Scenario daily orders divided by practical daily capacity.
+        - **Risk thresholds:** High fulfilment risk above 100% utilisation. Supplier risk is high when demand exceeds capacity.
         """
     )
+    st.caption(
+        "All thresholds are prototype assumptions based on synthetic data, "
+        "not official Flipkart operating rules."
+    )
+   
     st.write(
         "Source: Corrected synthetic dataset. "
         "Not actual Flipkart operational data."
